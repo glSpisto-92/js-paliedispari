@@ -1,30 +1,30 @@
 // Crea una funzione per capire se la parola è
 //  palindroma.
 //
-// var wordPalindrom = prompt('Inserisci parola e scopri se è palindroma!');
-//
-// function palindroma(parolaArg){
-//
-//   var wordReverse = "";
-//
-//   for( var i = parolaArg.length - 1; i >= 0; i-- ){
-//
-//     wordReverse = wordReverse + parolaArg[i];
-//
-//     console.log(wordReverse);
-//   }
-//
-//   if( wordReverse == parolaArg){
-//
-//     alert('la parola è palindroma')
-//
-//   } else {
-//
-//     alert('la parola non è palindroma');
-//   }
-//
-// }
-// palindroma(wordPalindrom);
+var wordPalindrom = prompt('Inserisci parola e scopri se è palindroma!');
+
+function palindroma(parolaArg){
+
+  var wordReverse = "";
+
+  for( var i = parolaArg.length - 1; i >= 0; i-- ){
+
+    wordReverse = wordReverse + parolaArg[i];
+
+    console.log(wordReverse);
+  }
+
+  if( wordReverse == parolaArg){
+
+    alert('la parola è palindroma')
+
+  } else {
+
+    alert('la parola non è palindroma');
+  }
+
+}
+palindroma(wordPalindrom);
 
 
 // Snack 2.
@@ -36,10 +36,13 @@
 // Dichiariamo chi ha vinto.
 
 //L' utente sceglie pari o dispari
-var pariDispari = prompt("Scegli pari o dispari ");
-var numUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
+do{
+  var pariDispari = prompt("Scegli pari o dispari ");
+} while ( pariDispari != 'pari' && pariDispari != 'dispari');
 
-// if( pariDispari != 'pari' && pariDispari != 'dispari'){
+do{
+  var numUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
+} while ( !(numUtente > 0  && numUtente <= 5) );
 
   //L' utente sceglie un numero da 1 a 5
 
@@ -74,7 +77,3 @@ var numUtente = parseInt(prompt('Inserisci un numero da 1 a 5'));
   }else {
     alert('hai perso!')
   }
-
-// else {
-//   alert('La richiesta è semplice...Scrivi pari o dispari. Ti è chiaro?!')
-// }
